@@ -33,7 +33,7 @@ defaults
 	errorfile 503 /etc/haproxy/errors/503.http
 	errorfile 504 /etc/haproxy/errors/504.http
 
-# start of parameters for ruthmarcuss.tech
+# start of parameters for donjhyde.tech
 frontend gobrand.tech-http-frontend
 	bind	 *:80
 	option forwardfor
@@ -41,12 +41,12 @@ frontend gobrand.tech-http-frontend
 
 
 frontend  gobrand.tech-https-frontend
-	bind *:443 ssl crt /etc/letsencrypt/live/www.ruthmarcuss.tech.tech/fullchain.pem
+	bind *:443 ssl crt /etc/letsencrypt/live/www.donjhyde.tech.tech/fullchain.pem
         default_backend nginx_webservers
 
 
 backend nginx_webservers
         balance roundrobin
-        server 61590-web-01  check
-        server 61590-web-02  check
+        server 141452-web-01  check
+        server 141452-web-02  check
 # end of parameters
